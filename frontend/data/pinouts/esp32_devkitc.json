@@ -1,0 +1,666 @@
+{
+  "id": "esp32_devkitc",
+  "name": "ESP32-DevKitC V4 (38-pin)",
+  "mcu": "ESP32",
+  "logicVoltage": 3.3,
+  "pitchMm": 2.54,
+  "tolerant5V": false,
+  "outlineMm": {
+    "width": 54.3,
+    "height": 27.94
+  },
+  "orientation": "u runs from the USB edge (0) to the antenna end (1); v runs from header J2 (0) to header J3 (1).",
+  "usbEnd": "u0",
+  "vision": {
+    "kind": "esp32",
+    "clipPrompt": "a photo of an ESP32 development board with a metal shielded module",
+    "pcb": { "type": "dark", "maxValue": 70 }
+  },
+  "alignPins": [
+    "3V3",
+    "5V",
+    "GND2"
+  ],
+  "variantNote": "Pin map is for the 38-pin Espressif DevKitC. 30-pin clones use a different header order and do not break out GPIO6-11, so the pin labels will not match those boards.",
+  "specs": {
+    "Logic level": "3.3 V (GPIOs are not 5 V tolerant)",
+    "Flash pins": "GPIO6-11, do not use",
+    "Input-only pins": "GPIO34-39, no internal pull resistors",
+    "Strapping pins": "GPIO0, 2, 5, 12, 15",
+    "ADC2": "Unavailable while Wi-Fi is active; use ADC1 pins",
+    "GPIO16/17": "Usable on WROOM/SOLO-1 modules only; WROVER reserves them"
+  },
+  "sources": [
+    {
+      "what": "Header order and pin functions",
+      "ref": "ESP32-DevKitC V4 user guide, Header Block tables J2 and J3",
+      "url": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32/esp32-devkitc/user_guide.html"
+    },
+    {
+      "what": "Pin coordinates",
+      "ref": "Espressif esp32_devkitc_v4_dimensions.dxf: 2.54 mm pitch, 25.40 mm row spacing, 48.26 x 27.94 mm PCB, 6.04 mm antenna overhang",
+      "url": "https://dl.espressif.com/dl/schematics/esp32_devkitc_v4_dimensions.dxf"
+    },
+    {
+      "what": "Reserved and input-only pins",
+      "ref": "ESP-IDF GPIO and RTC GPIO reference for ESP32",
+      "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/gpio.html"
+    }
+  ],
+  "pins": [
+    {
+      "id": "3V3",
+      "header": "J2",
+      "position": 1,
+      "label": "3V3",
+      "role": "power",
+      "u": 0.86575,
+      "v": 0.04545,
+      "net": "3V3",
+      "functions": [
+        "3.3 V power supply"
+      ]
+    },
+    {
+      "id": "EN",
+      "header": "J2",
+      "position": 2,
+      "label": "EN",
+      "role": "reset",
+      "u": 0.81897,
+      "v": 0.04545,
+      "net": "EN",
+      "functions": [
+        "CHIP_PU, reset"
+      ]
+    },
+    {
+      "id": "GPIO36",
+      "header": "J2",
+      "position": 3,
+      "label": "VP",
+      "role": "gpio",
+      "u": 0.77219,
+      "v": 0.04545,
+      "net": "GPIO36",
+      "functions": [
+        "GPIO36",
+        "ADC1_CH0",
+        "S_VP"
+      ],
+      "tags": [
+        "input_only"
+      ]
+    },
+    {
+      "id": "GPIO39",
+      "header": "J2",
+      "position": 4,
+      "label": "VN",
+      "role": "gpio",
+      "u": 0.72541,
+      "v": 0.04545,
+      "net": "GPIO39",
+      "functions": [
+        "GPIO39",
+        "ADC1_CH3",
+        "S_VN"
+      ],
+      "tags": [
+        "input_only"
+      ]
+    },
+    {
+      "id": "GPIO34",
+      "header": "J2",
+      "position": 5,
+      "label": "IO34",
+      "role": "gpio",
+      "u": 0.67864,
+      "v": 0.04545,
+      "net": "GPIO34",
+      "functions": [
+        "GPIO34",
+        "ADC1_CH6",
+        "VDET_1"
+      ],
+      "tags": [
+        "input_only"
+      ]
+    },
+    {
+      "id": "GPIO35",
+      "header": "J2",
+      "position": 6,
+      "label": "IO35",
+      "role": "gpio",
+      "u": 0.63186,
+      "v": 0.04545,
+      "net": "GPIO35",
+      "functions": [
+        "GPIO35",
+        "ADC1_CH7",
+        "VDET_2"
+      ],
+      "tags": [
+        "input_only"
+      ]
+    },
+    {
+      "id": "GPIO32",
+      "header": "J2",
+      "position": 7,
+      "label": "IO32",
+      "role": "gpio",
+      "u": 0.58508,
+      "v": 0.04545,
+      "net": "GPIO32",
+      "functions": [
+        "GPIO32",
+        "ADC1_CH4",
+        "TOUCH_CH9",
+        "XTAL_32K_P"
+      ]
+    },
+    {
+      "id": "GPIO33",
+      "header": "J2",
+      "position": 8,
+      "label": "IO33",
+      "role": "gpio",
+      "u": 0.53831,
+      "v": 0.04545,
+      "net": "GPIO33",
+      "functions": [
+        "GPIO33",
+        "ADC1_CH5",
+        "TOUCH_CH8",
+        "XTAL_32K_N"
+      ]
+    },
+    {
+      "id": "GPIO25",
+      "header": "J2",
+      "position": 9,
+      "label": "IO25",
+      "role": "gpio",
+      "u": 0.49153,
+      "v": 0.04545,
+      "net": "GPIO25",
+      "functions": [
+        "GPIO25",
+        "ADC2_CH8",
+        "DAC_1"
+      ],
+      "tags": [
+        "adc2"
+      ]
+    },
+    {
+      "id": "GPIO26",
+      "header": "J2",
+      "position": 10,
+      "label": "IO26",
+      "role": "gpio",
+      "u": 0.44475,
+      "v": 0.04545,
+      "net": "GPIO26",
+      "functions": [
+        "GPIO26",
+        "ADC2_CH9",
+        "DAC_2"
+      ],
+      "tags": [
+        "adc2"
+      ]
+    },
+    {
+      "id": "GPIO27",
+      "header": "J2",
+      "position": 11,
+      "label": "IO27",
+      "role": "gpio",
+      "u": 0.39797,
+      "v": 0.04545,
+      "net": "GPIO27",
+      "functions": [
+        "GPIO27",
+        "ADC2_CH7",
+        "TOUCH_CH7"
+      ],
+      "tags": [
+        "adc2"
+      ]
+    },
+    {
+      "id": "GPIO14",
+      "header": "J2",
+      "position": 12,
+      "label": "IO14",
+      "role": "gpio",
+      "u": 0.3512,
+      "v": 0.04545,
+      "net": "GPIO14",
+      "functions": [
+        "GPIO14",
+        "ADC2_CH6",
+        "TOUCH_CH6",
+        "MTMS"
+      ],
+      "tags": [
+        "adc2"
+      ]
+    },
+    {
+      "id": "GPIO12",
+      "header": "J2",
+      "position": 13,
+      "label": "IO12",
+      "role": "gpio",
+      "u": 0.30442,
+      "v": 0.04545,
+      "net": "GPIO12",
+      "functions": [
+        "GPIO12",
+        "ADC2_CH5",
+        "TOUCH_CH5",
+        "MTDI"
+      ],
+      "tags": [
+        "strapping",
+        "adc2"
+      ]
+    },
+    {
+      "id": "GND1",
+      "header": "J2",
+      "position": 14,
+      "label": "GND",
+      "role": "ground",
+      "u": 0.25764,
+      "v": 0.04545,
+      "net": "GND",
+      "functions": [
+        "Ground"
+      ]
+    },
+    {
+      "id": "GPIO13",
+      "header": "J2",
+      "position": 15,
+      "label": "IO13",
+      "role": "gpio",
+      "u": 0.21087,
+      "v": 0.04545,
+      "net": "GPIO13",
+      "functions": [
+        "GPIO13",
+        "ADC2_CH4",
+        "TOUCH_CH4",
+        "MTCK"
+      ],
+      "tags": [
+        "adc2"
+      ]
+    },
+    {
+      "id": "GPIO9",
+      "header": "J2",
+      "position": 16,
+      "label": "D2",
+      "role": "gpio",
+      "u": 0.16409,
+      "v": 0.04545,
+      "net": "GPIO9",
+      "functions": [
+        "GPIO9",
+        "SPI flash D2"
+      ],
+      "tags": [
+        "flash"
+      ]
+    },
+    {
+      "id": "GPIO10",
+      "header": "J2",
+      "position": 17,
+      "label": "D3",
+      "role": "gpio",
+      "u": 0.11731,
+      "v": 0.04545,
+      "net": "GPIO10",
+      "functions": [
+        "GPIO10",
+        "SPI flash D3"
+      ],
+      "tags": [
+        "flash"
+      ]
+    },
+    {
+      "id": "GPIO11",
+      "header": "J2",
+      "position": 18,
+      "label": "CMD",
+      "role": "gpio",
+      "u": 0.07053,
+      "v": 0.04545,
+      "net": "GPIO11",
+      "functions": [
+        "GPIO11",
+        "SPI flash CMD"
+      ],
+      "tags": [
+        "flash"
+      ]
+    },
+    {
+      "id": "5V",
+      "header": "J2",
+      "position": 19,
+      "label": "5V",
+      "role": "power",
+      "u": 0.02376,
+      "v": 0.04545,
+      "net": "5V",
+      "functions": [
+        "5 V power supply"
+      ]
+    },
+    {
+      "id": "GND2",
+      "header": "J3",
+      "position": 1,
+      "label": "GND",
+      "role": "ground",
+      "u": 0.86575,
+      "v": 0.95455,
+      "net": "GND",
+      "functions": [
+        "Ground"
+      ]
+    },
+    {
+      "id": "GPIO23",
+      "header": "J3",
+      "position": 2,
+      "label": "IO23",
+      "role": "gpio",
+      "u": 0.81897,
+      "v": 0.95455,
+      "net": "GPIO23",
+      "functions": [
+        "GPIO23"
+      ]
+    },
+    {
+      "id": "GPIO22",
+      "header": "J3",
+      "position": 3,
+      "label": "IO22",
+      "role": "gpio",
+      "u": 0.77219,
+      "v": 0.95455,
+      "net": "GPIO22",
+      "functions": [
+        "GPIO22"
+      ]
+    },
+    {
+      "id": "GPIO1",
+      "header": "J3",
+      "position": 4,
+      "label": "TX",
+      "role": "gpio",
+      "u": 0.72541,
+      "v": 0.95455,
+      "net": "GPIO1",
+      "functions": [
+        "GPIO1",
+        "U0TXD"
+      ],
+      "tags": [
+        "uart0"
+      ]
+    },
+    {
+      "id": "GPIO3",
+      "header": "J3",
+      "position": 5,
+      "label": "RX",
+      "role": "gpio",
+      "u": 0.67864,
+      "v": 0.95455,
+      "net": "GPIO3",
+      "functions": [
+        "GPIO3",
+        "U0RXD"
+      ],
+      "tags": [
+        "uart0"
+      ]
+    },
+    {
+      "id": "GPIO21",
+      "header": "J3",
+      "position": 6,
+      "label": "IO21",
+      "role": "gpio",
+      "u": 0.63186,
+      "v": 0.95455,
+      "net": "GPIO21",
+      "functions": [
+        "GPIO21"
+      ]
+    },
+    {
+      "id": "GND3",
+      "header": "J3",
+      "position": 7,
+      "label": "GND",
+      "role": "ground",
+      "u": 0.58508,
+      "v": 0.95455,
+      "net": "GND",
+      "functions": [
+        "Ground"
+      ]
+    },
+    {
+      "id": "GPIO19",
+      "header": "J3",
+      "position": 8,
+      "label": "IO19",
+      "role": "gpio",
+      "u": 0.53831,
+      "v": 0.95455,
+      "net": "GPIO19",
+      "functions": [
+        "GPIO19"
+      ]
+    },
+    {
+      "id": "GPIO18",
+      "header": "J3",
+      "position": 9,
+      "label": "IO18",
+      "role": "gpio",
+      "u": 0.49153,
+      "v": 0.95455,
+      "net": "GPIO18",
+      "functions": [
+        "GPIO18"
+      ]
+    },
+    {
+      "id": "GPIO5",
+      "header": "J3",
+      "position": 10,
+      "label": "IO5",
+      "role": "gpio",
+      "u": 0.44475,
+      "v": 0.95455,
+      "net": "GPIO5",
+      "functions": [
+        "GPIO5"
+      ],
+      "tags": [
+        "strapping"
+      ]
+    },
+    {
+      "id": "GPIO17",
+      "header": "J3",
+      "position": 11,
+      "label": "IO17",
+      "role": "gpio",
+      "u": 0.39797,
+      "v": 0.95455,
+      "net": "GPIO17",
+      "functions": [
+        "GPIO17"
+      ]
+    },
+    {
+      "id": "GPIO16",
+      "header": "J3",
+      "position": 12,
+      "label": "IO16",
+      "role": "gpio",
+      "u": 0.3512,
+      "v": 0.95455,
+      "net": "GPIO16",
+      "functions": [
+        "GPIO16"
+      ]
+    },
+    {
+      "id": "GPIO4",
+      "header": "J3",
+      "position": 13,
+      "label": "IO4",
+      "role": "gpio",
+      "u": 0.30442,
+      "v": 0.95455,
+      "net": "GPIO4",
+      "functions": [
+        "GPIO4",
+        "ADC2_CH0",
+        "TOUCH_CH0"
+      ],
+      "tags": [
+        "adc2"
+      ]
+    },
+    {
+      "id": "GPIO0",
+      "header": "J3",
+      "position": 14,
+      "label": "IO0",
+      "role": "gpio",
+      "u": 0.25764,
+      "v": 0.95455,
+      "net": "GPIO0",
+      "functions": [
+        "GPIO0",
+        "ADC2_CH1",
+        "TOUCH_CH1",
+        "Boot"
+      ],
+      "tags": [
+        "strapping",
+        "adc2"
+      ]
+    },
+    {
+      "id": "GPIO2",
+      "header": "J3",
+      "position": 15,
+      "label": "IO2",
+      "role": "gpio",
+      "u": 0.21087,
+      "v": 0.95455,
+      "net": "GPIO2",
+      "functions": [
+        "GPIO2",
+        "ADC2_CH2",
+        "TOUCH_CH2"
+      ],
+      "tags": [
+        "strapping",
+        "adc2"
+      ]
+    },
+    {
+      "id": "GPIO15",
+      "header": "J3",
+      "position": 16,
+      "label": "IO15",
+      "role": "gpio",
+      "u": 0.16409,
+      "v": 0.95455,
+      "net": "GPIO15",
+      "functions": [
+        "GPIO15",
+        "ADC2_CH3",
+        "TOUCH_CH3",
+        "MTDO"
+      ],
+      "tags": [
+        "strapping",
+        "adc2"
+      ]
+    },
+    {
+      "id": "GPIO8",
+      "header": "J3",
+      "position": 17,
+      "label": "D1",
+      "role": "gpio",
+      "u": 0.11731,
+      "v": 0.95455,
+      "net": "GPIO8",
+      "functions": [
+        "GPIO8",
+        "SPI flash D1"
+      ],
+      "tags": [
+        "flash"
+      ]
+    },
+    {
+      "id": "GPIO7",
+      "header": "J3",
+      "position": 18,
+      "label": "D0",
+      "role": "gpio",
+      "u": 0.07053,
+      "v": 0.95455,
+      "net": "GPIO7",
+      "functions": [
+        "GPIO7",
+        "SPI flash D0"
+      ],
+      "tags": [
+        "flash"
+      ]
+    },
+    {
+      "id": "GPIO6",
+      "header": "J3",
+      "position": 19,
+      "label": "CLK",
+      "role": "gpio",
+      "u": 0.02376,
+      "v": 0.95455,
+      "net": "GPIO6",
+      "functions": [
+        "GPIO6",
+        "SPI flash CLK"
+      ],
+      "tags": [
+        "flash"
+      ]
+    }
+  ]
+}

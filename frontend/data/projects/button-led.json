@@ -1,0 +1,37 @@
+{
+  "id": "button-led",
+  "name": "Pushbutton + LED",
+  "summary": "A pushbutton read on one digital pin (INPUT_PULLUP) and an LED driven from another.",
+  "steps": [
+    {
+      "id": "led-present",
+      "text": "An LED is on the breadboard",
+      "check": { "type": "part_present", "kind": "led", "count": 1 }
+    },
+    {
+      "id": "resistor-present",
+      "text": "A resistor is on the breadboard for the LED",
+      "check": { "type": "part_present", "kind": "resistor", "count": 1 }
+    },
+    {
+      "id": "button-present",
+      "text": "A pushbutton is on the breadboard",
+      "check": { "type": "part_present", "kind": "button", "count": 1 }
+    },
+    {
+      "id": "led-path",
+      "text": "Digital pin connects through the resistor and LED to GND",
+      "check": { "type": "series_path", "from": "gpio", "via": ["resistor", "led"], "to": "GND" }
+    },
+    {
+      "id": "button-path",
+      "text": "A different digital pin connects through the button to GND",
+      "check": { "type": "series_path", "from": "gpio", "via": ["button"], "to": "GND" }
+    },
+    {
+      "id": "no-shorts",
+      "text": "No power-to-ground short is present",
+      "check": { "type": "rules_clear", "rules": ["short-power-gnd", "supply-conflict"] }
+    }
+  ]
+}

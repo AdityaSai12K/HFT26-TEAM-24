@@ -1,0 +1,30 @@
+[
+  {
+    "id": "blink-ok",
+    "title": "LED Blink, wired correctly"
+  },
+  {
+    "id": "no-resistor",
+    "title": "LED with no resistor"
+  },
+  {
+    "id": "short",
+    "title": "5V shorted to GND through a rail"
+  },
+  {
+    "id": "rails-joined",
+    "title": "Wire across the + and - rails"
+  },
+  {
+    "id": "approach-far",
+    "title": "5V wire heading for GND"
+  },
+  {
+    "id": "approach-near",
+    "title": "5V wire about to reach GND"
+  },
+  {
+    "id": "approach-touch",
+    "title": "5V wire lands on the GND column"
+  }
+]

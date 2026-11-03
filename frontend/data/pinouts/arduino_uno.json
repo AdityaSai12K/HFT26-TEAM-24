@@ -1,0 +1,493 @@
+{
+  "id": "arduino_uno",
+  "name": "Arduino Uno R3",
+  "mcu": "ATmega328P",
+  "logicVoltage": 5,
+  "pitchMm": 2.54,
+  "tolerant5V": true,
+  "outlineMm": {
+    "width": 68.58,
+    "height": 53.34
+  },
+  "orientation": "u runs from the USB/power-jack edge (0) to the far edge (1); v runs from the digital header edge (0) to the power/analog header edge (1).",
+  "usbEnd": "u0",
+  "vision": {
+    "kind": "arduino_uno",
+    "clipPrompt": "a photo of an Arduino Uno board",
+    "pcb": { "type": "colour", "hsvLow": [88, 80, 45], "hsvHigh": [118, 255, 255] },
+    "pcbEvidence": "teal PCB visible, so probably an Uno"
+  },
+  "alignPins": [
+    "SCL",
+    "D0",
+    "A5"
+  ],
+  "specs": {
+    "Operating voltage": "5 V",
+    "VIN limits": "6-20 V (datasheet maximum ratings)",
+    "USB input": "5.5 V max",
+    "Max I/O pin current": "40 mA absolute, 20 mA recommended",
+    "Clock": "16 MHz",
+    "PWM pins": "D3, D5, D6, D9, D10, D11",
+    "I2C": "A4/SDA, A5/SCL",
+    "SPI": "D10 SS, D11 MOSI, D12 MISO, D13 SCK",
+    "UART": "D0 RX, D1 TX",
+    "Interrupts": "D2, D3",
+    "On-board LED": "D13"
+  },
+  "sources": [
+    {
+      "what": "Header order and pin functions",
+      "ref": "Arduino UNO R3 datasheet (A000066), sections 5.1 JANALOG and 5.2 JDIGITAL",
+      "url": "https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf"
+    },
+    {
+      "what": "Pin coordinates",
+      "ref": "Wayne and Layne Uno R3 drawing v1.05, drawn from the official Rev3 PCB layout (2700 x 2100 mil)",
+      "url": "https://www.wayneandlayne.com/files/common/arduino_uno_drawing.svg"
+    },
+    {
+      "what": "I/O current limits",
+      "ref": "ATmega328P datasheet, Absolute Maximum Ratings. Not stated in the Uno datasheet.",
+      "url": "https://www.microchip.com/en-us/product/atmega328p"
+    }
+  ],
+  "pins": [
+    {
+      "id": "NC",
+      "header": "JANALOG",
+      "position": 1,
+      "label": "NC",
+      "role": "nc",
+      "u": 0.40741,
+      "v": 0.95238,
+      "net": "NC",
+      "functions": [],
+      "notes": "Not connected."
+    },
+    {
+      "id": "IOREF",
+      "header": "JANALOG",
+      "position": 2,
+      "label": "IOREF",
+      "role": "reference",
+      "u": 0.44444,
+      "v": 0.95238,
+      "net": "IOREF",
+      "functions": [
+        "Logic-level reference, tied to 5 V on the Uno"
+      ]
+    },
+    {
+      "id": "RESET",
+      "header": "JANALOG",
+      "position": 3,
+      "label": "RESET",
+      "role": "reset",
+      "u": 0.48148,
+      "v": 0.95238,
+      "net": "RESET",
+      "functions": [
+        "Active-low reset"
+      ]
+    },
+    {
+      "id": "3V3",
+      "header": "JANALOG",
+      "position": 4,
+      "label": "3V3",
+      "role": "power",
+      "u": 0.51852,
+      "v": 0.95238,
+      "net": "3V3",
+      "functions": [
+        "+3V3 power rail"
+      ]
+    },
+    {
+      "id": "5V",
+      "header": "JANALOG",
+      "position": 5,
+      "label": "5V",
+      "role": "power",
+      "u": 0.55556,
+      "v": 0.95238,
+      "net": "5V",
+      "functions": [
+        "+5V power rail"
+      ]
+    },
+    {
+      "id": "GND1",
+      "header": "JANALOG",
+      "position": 6,
+      "label": "GND",
+      "role": "ground",
+      "u": 0.59259,
+      "v": 0.95238,
+      "net": "GND",
+      "functions": [
+        "Ground"
+      ]
+    },
+    {
+      "id": "GND2",
+      "header": "JANALOG",
+      "position": 7,
+      "label": "GND",
+      "role": "ground",
+      "u": 0.62963,
+      "v": 0.95238,
+      "net": "GND",
+      "functions": [
+        "Ground"
+      ]
+    },
+    {
+      "id": "VIN",
+      "header": "JANALOG",
+      "position": 8,
+      "label": "VIN",
+      "role": "power",
+      "u": 0.66667,
+      "v": 0.95238,
+      "net": "VIN",
+      "functions": [
+        "Raw voltage input, 6-20 V absolute limits"
+      ]
+    },
+    {
+      "id": "A0",
+      "header": "JANALOG",
+      "position": 9,
+      "label": "A0",
+      "role": "gpio",
+      "u": 0.74074,
+      "v": 0.95238,
+      "net": "A0",
+      "functions": [
+        "Analog input 0",
+        "Digital GPIO"
+      ]
+    },
+    {
+      "id": "A1",
+      "header": "JANALOG",
+      "position": 10,
+      "label": "A1",
+      "role": "gpio",
+      "u": 0.77778,
+      "v": 0.95238,
+      "net": "A1",
+      "functions": [
+        "Analog input 1",
+        "Digital GPIO"
+      ]
+    },
+    {
+      "id": "A2",
+      "header": "JANALOG",
+      "position": 11,
+      "label": "A2",
+      "role": "gpio",
+      "u": 0.81481,
+      "v": 0.95238,
+      "net": "A2",
+      "functions": [
+        "Analog input 2",
+        "Digital GPIO"
+      ]
+    },
+    {
+      "id": "A3",
+      "header": "JANALOG",
+      "position": 12,
+      "label": "A3",
+      "role": "gpio",
+      "u": 0.85185,
+      "v": 0.95238,
+      "net": "A3",
+      "functions": [
+        "Analog input 3",
+        "Digital GPIO"
+      ]
+    },
+    {
+      "id": "A4",
+      "header": "JANALOG",
+      "position": 13,
+      "label": "A4/SDA",
+      "role": "gpio",
+      "u": 0.88889,
+      "v": 0.95238,
+      "net": "A4",
+      "functions": [
+        "Analog input 4",
+        "I2C SDA"
+      ]
+    },
+    {
+      "id": "A5",
+      "header": "JANALOG",
+      "position": 14,
+      "label": "A5/SCL",
+      "role": "gpio",
+      "u": 0.92593,
+      "v": 0.95238,
+      "net": "A5",
+      "functions": [
+        "Analog input 5",
+        "I2C SCL"
+      ]
+    },
+    {
+      "id": "D0",
+      "header": "JDIGITAL",
+      "position": 1,
+      "label": "D0",
+      "role": "gpio",
+      "u": 0.92593,
+      "v": 0.04762,
+      "net": "D0",
+      "functions": [
+        "Digital GPIO",
+        "UART RX (shared with USB bridge)"
+      ]
+    },
+    {
+      "id": "D1",
+      "header": "JDIGITAL",
+      "position": 2,
+      "label": "D1",
+      "role": "gpio",
+      "u": 0.88889,
+      "v": 0.04762,
+      "net": "D1",
+      "functions": [
+        "Digital GPIO",
+        "UART TX (shared with USB bridge)"
+      ]
+    },
+    {
+      "id": "D2",
+      "header": "JDIGITAL",
+      "position": 3,
+      "label": "D2",
+      "role": "gpio",
+      "u": 0.85185,
+      "v": 0.04762,
+      "net": "D2",
+      "functions": [
+        "Digital GPIO",
+        "External interrupt 0"
+      ]
+    },
+    {
+      "id": "D3",
+      "header": "JDIGITAL",
+      "position": 4,
+      "label": "D3",
+      "role": "gpio",
+      "u": 0.81481,
+      "v": 0.04762,
+      "net": "D3",
+      "functions": [
+        "Digital GPIO",
+        "PWM",
+        "External interrupt 1"
+      ]
+    },
+    {
+      "id": "D4",
+      "header": "JDIGITAL",
+      "position": 5,
+      "label": "D4",
+      "role": "gpio",
+      "u": 0.77778,
+      "v": 0.04762,
+      "net": "D4",
+      "functions": [
+        "Digital GPIO"
+      ]
+    },
+    {
+      "id": "D5",
+      "header": "JDIGITAL",
+      "position": 6,
+      "label": "D5",
+      "role": "gpio",
+      "u": 0.74074,
+      "v": 0.04762,
+      "net": "D5",
+      "functions": [
+        "Digital GPIO",
+        "PWM"
+      ]
+    },
+    {
+      "id": "D6",
+      "header": "JDIGITAL",
+      "position": 7,
+      "label": "D6",
+      "role": "gpio",
+      "u": 0.7037,
+      "v": 0.04762,
+      "net": "D6",
+      "functions": [
+        "Digital GPIO",
+        "PWM"
+      ]
+    },
+    {
+      "id": "D7",
+      "header": "JDIGITAL",
+      "position": 8,
+      "label": "D7",
+      "role": "gpio",
+      "u": 0.66667,
+      "v": 0.04762,
+      "net": "D7",
+      "functions": [
+        "Digital GPIO"
+      ]
+    },
+    {
+      "id": "D8",
+      "header": "JDIGITAL",
+      "position": 9,
+      "label": "D8",
+      "role": "gpio",
+      "u": 0.60741,
+      "v": 0.04762,
+      "net": "D8",
+      "functions": [
+        "Digital GPIO"
+      ]
+    },
+    {
+      "id": "D9",
+      "header": "JDIGITAL",
+      "position": 10,
+      "label": "D9",
+      "role": "gpio",
+      "u": 0.57037,
+      "v": 0.04762,
+      "net": "D9",
+      "functions": [
+        "Digital GPIO",
+        "PWM"
+      ]
+    },
+    {
+      "id": "D10",
+      "header": "JDIGITAL",
+      "position": 11,
+      "label": "D10",
+      "role": "gpio",
+      "u": 0.53333,
+      "v": 0.04762,
+      "net": "D10",
+      "functions": [
+        "Digital GPIO",
+        "PWM",
+        "SPI SS"
+      ]
+    },
+    {
+      "id": "D11",
+      "header": "JDIGITAL",
+      "position": 12,
+      "label": "D11",
+      "role": "gpio",
+      "u": 0.4963,
+      "v": 0.04762,
+      "net": "D11",
+      "functions": [
+        "Digital GPIO",
+        "PWM",
+        "SPI MOSI"
+      ]
+    },
+    {
+      "id": "D12",
+      "header": "JDIGITAL",
+      "position": 13,
+      "label": "D12",
+      "role": "gpio",
+      "u": 0.45926,
+      "v": 0.04762,
+      "net": "D12",
+      "functions": [
+        "Digital GPIO",
+        "SPI MISO"
+      ]
+    },
+    {
+      "id": "D13",
+      "header": "JDIGITAL",
+      "position": 14,
+      "label": "D13",
+      "role": "gpio",
+      "u": 0.42222,
+      "v": 0.04762,
+      "net": "D13",
+      "functions": [
+        "Digital GPIO",
+        "SPI SCK",
+        "On-board LED"
+      ]
+    },
+    {
+      "id": "GND3",
+      "header": "JDIGITAL",
+      "position": 15,
+      "label": "GND",
+      "role": "ground",
+      "u": 0.38519,
+      "v": 0.04762,
+      "net": "GND",
+      "functions": [
+        "Ground"
+      ]
+    },
+    {
+      "id": "AREF",
+      "header": "JDIGITAL",
+      "position": 16,
+      "label": "AREF",
+      "role": "reference",
+      "u": 0.34815,
+      "v": 0.04762,
+      "net": "AREF",
+      "functions": [
+        "Analog reference voltage"
+      ]
+    },
+    {
+      "id": "SDA",
+      "header": "JDIGITAL",
+      "position": 17,
+      "label": "SDA",
+      "role": "gpio",
+      "u": 0.31111,
+      "v": 0.04762,
+      "net": "A4",
+      "functions": [
+        "I2C SDA (same net as A4)"
+      ]
+    },
+    {
+      "id": "SCL",
+      "header": "JDIGITAL",
+      "position": 18,
+      "label": "SCL",
+      "role": "gpio",
+      "u": 0.27407,
+      "v": 0.04762,
+      "net": "A5",
+      "functions": [
+        "I2C SCL (same net as A5)"
+      ]
+    }
+  ]
+}

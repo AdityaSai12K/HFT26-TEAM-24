@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-multipart
+numpy
+scipy
+scikit-image
+opencv-python-headless
+pillow
+torch
+torchvision
+ultralytics
+# CLIP weights and YOLO-World's text encoder. Ultralytics installs this on demand, pinned here so startup needs no pip.
+clip @ git+https://github.com/ultralytics/CLIP.git
+
+# Tests
+pytest
+httpx

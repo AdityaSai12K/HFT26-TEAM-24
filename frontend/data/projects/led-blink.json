@@ -1,0 +1,27 @@
+{
+  "id": "led-blink",
+  "name": "LED Blink",
+  "summary": "One LED driven by a digital pin through a current-limiting resistor.",
+  "steps": [
+    {
+      "id": "led-present",
+      "text": "An LED is on the breadboard",
+      "check": { "type": "part_present", "kind": "led", "count": 1 }
+    },
+    {
+      "id": "resistor-present",
+      "text": "A resistor is on the breadboard (220 ohm to 1 k)",
+      "check": { "type": "part_present", "kind": "resistor", "count": 1 }
+    },
+    {
+      "id": "series-path",
+      "text": "Digital pin connects through the resistor and LED to GND",
+      "check": { "type": "series_path", "from": "gpio", "via": ["resistor", "led"], "to": "GND" }
+    },
+    {
+      "id": "no-shorts",
+      "text": "No power-to-ground short is present",
+      "check": { "type": "rules_clear", "rules": ["short-power-gnd", "supply-conflict"] }
+    }
+  ]
+}
